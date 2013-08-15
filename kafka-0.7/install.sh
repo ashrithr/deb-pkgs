@@ -36,6 +36,7 @@ mkdir DEBIAN
 # Get the control files
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/DEBIAN/control -o DEBIAN/control
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/DEBIAN/changelog -o DEBIAN/changelog
+curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/DEBIAN/preinst -o DEBIAN/preinst
 mkdir -p etc/{init,default}
 # Get Maintiner Scrits
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/etc/default/kafka -o etc/default/kafka
