@@ -37,8 +37,10 @@ mkdir DEBIAN
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/DEBIAN/control -o DEBIAN/control
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/DEBIAN/changelog -o DEBIAN/changelog
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/DEBIAN/preinst -o DEBIAN/preinst
+curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/DEBIAN/postinst -o DEBIAN/postinst
 chmod 755 DEBIAN/preinst
-mkdir -p etc/{init,default}
+chmod 755 DEBIAN/postinst
+mkdir -p etc/{init.d,default}
 # Get Maintiner Scrits
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/etc/default/kafka-server -o etc/default/kafka-server
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/etc/init.d/kafka-server -o etc/init.d/kafka-server
