@@ -3,9 +3,9 @@ KAFKA_START=no
 KAFKA_HOME=/opt/kafka
 export KAFKA_CONF=/etc/kafka/
 export KAFKA_LOG_DIR=/var/log/kafka
-JMX_PORT=7999
+KAFKA_JMX_PORT=7999
 # JMX options
-KAFKA_JMX_OPTS=${KAFKA_JMX_OPTS:="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"}
+KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=$KAFKA_JMX_PORT "
 KAFKA_USER=kafka
 KAFKA_GROUP=kafka
 KAFKA_JAVA_OPTS="-Xmx512M -server -Dlog4j.configuration=file:$KAFKA_CONF/log4j.properties $KAFKA_JMX_OPTS"
