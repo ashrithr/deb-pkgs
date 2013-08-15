@@ -40,4 +40,4 @@ mkdir -p etc/{init,default}
 # Get Maintiner Scrits
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/etc/default/kafka -o etc/default/kafka
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.7/etc/init/kafka-server -o etc/init/kafka-server
-dpkg-deb --build $BUILD_DIR
+dpkg-deb --build /tmp/$BUILD_DIR
