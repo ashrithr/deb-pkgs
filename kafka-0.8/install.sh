@@ -40,6 +40,6 @@ curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/DEBIAN/preinst -o
 chmod 755 DEBIAN/preinst
 mkdir -p etc/{init,default}
 # Get Maintiner Scrits
-curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/etc/default/kafka -o etc/default/kafka
-curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/etc/init/kafka-server -o etc/init/kafka-server
+curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/etc/default/kafka-server -o etc/default/kafka-server
+curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/etc/init.d/kafka-server -o etc/init.d/kafka-server
 dpkg-deb --build /tmp/$BUILD_DIR
