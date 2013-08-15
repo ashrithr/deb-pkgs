@@ -1,0 +1,7 @@
+Package: kafka
+Version: 0.7.2-1
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: Ankus <ankus@cloudwick.com>
+Description: Kafka, a distributed publish subscribe message queue
