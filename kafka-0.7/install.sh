@@ -16,6 +16,8 @@ KAFKA_DIR="$BUILD_DIR/opt/kafka"
 #   DEBIAN
 #     changelog
 #     control
+#     postinst
+#     preinst
 
 cd /tmp
 # Create req dir's

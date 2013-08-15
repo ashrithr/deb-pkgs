@@ -16,6 +16,8 @@ KAFKA_DIR="$BUILD_DIR/opt/kafka"
 #   DEBIAN
 #     changelog
 #     control
+#     postinst
+#     preinst
 
 cd /tmp
 # Create req dir's
@@ -37,8 +39,10 @@ mkdir DEBIAN
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/DEBIAN/control -o DEBIAN/control
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/DEBIAN/changelog -o DEBIAN/changelog
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/DEBIAN/preinst -o DEBIAN/preinst
+curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/DEBIAN/postinst -o DEBIAN/postinst
 chmod 755 DEBIAN/preinst
-mkdir -p etc/{init,default}
+chmod 755 DEBIAN/postinst
+mkdir -p etc/{init.d,default}
 # Get Maintiner Scrits
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/etc/default/kafka-server -o etc/default/kafka-server
 curl https://raw.github.com/ashrithr/deb-pkgs/master/kafka-0.8/etc/init.d/kafka-server -o etc/init.d/kafka-server
