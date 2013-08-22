@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 VERSION=0.8.2
 REVISION=1
 BUILD_DIR="storm_$VERSION-$REVISION"
@@ -29,9 +30,9 @@ cd /tmp
 # Clean up if already exists
 [ -f "${STORM_DIR}" ] && rm -rf ${STORM_DIR}
 [ -f "${BUILD_DIR}.deb" ] && rm "${BUILD_DIR}.deb"
-apt-get update unzip
+apt-get install unzip
 unzip $TARFILE
-mv storm-${VERSION} storm
+cp -r storm-${VERSION}/* ${STORM_DIR}
 cd $STORM_DIR
 cd /tmp/$BUILD_DIR
 mkdir DEBIAN
